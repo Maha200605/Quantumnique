@@ -1,0 +1,201 @@
+
+QUANTUMNIQUE PLACEMENT ENGINE
+DAY 7 – FULL TRAINING PLAN (INTERVIEW FOCUSED)
+===========================================
+
+BLOCK 1 – APTITUDE (Probability)
+
+Question 1
+What is the probability of getting a head when tossing a coin?
+Solution:
+=2(Head,Tail)
+=1(Head)
+=1/2
+
+Question 2
+What is the probability of getting a number greater than 4 when rolling a dice?
+Solution:
+dice=1,2,3,4,5,6
+Number>4=5,6→2outcome
+Total=6
+2/6=1/3
+
+Question 3
+A bag contains 3 red balls and 2 blue balls.
+Find probability of picking a red ball.
+Solution:
+3red+2 blue
+Total=5
+Red=3
+=3/5
+
+Question 4
+If two coins are tossed, what is probability of getting two heads?
+Solution:
+Possible:HH,HT,TH,TT
+Favorable:HH(1)
+=1/4
+
+Question 5
+Probability of selecting a vowel from the word ENGINEER.
+Solution:
+Word=ENGINEER
+Letters=8
+Vowels=E,I,E,E→4
+4/8=1/2
+
+===========================================
+BLOCK 2 – VERBAL ABILITY (Advanced)
+
+Reading Passage
+
+Operating systems manage hardware resources and provide services for computer programs.
+Efficient OS design ensures better performance, memory management, and process scheduling.
+
+Questions
+
+1. What is the main role of an operating system?
+    An operating system manages computer hardware and helps programs run.
+2. Why is memory management important?
+    Memory management is important to use memory efficiently and improve performance.
+3. What is process scheduling?
+    Process scheduling means deciding which program runs first and when.
+
+Grammar Correction
+
+1. He doesn’t know operating systems.
+2. She was learning data structures.
+3. They have solved the problem.
+
+===========================================
+BLOCK 3 – COMMUNICATION PRACTICE
+
+Speak for 3 minutes on:
+
+Explain how the Internet works
+
+Include:
+- What happens when you type a URL
+- DNS
+- Server
+- Response
+The internet helps us to open websites, watch videos, and send messages, and it connects many computers all over the world. 
+When we type a website name like in a browser, our computer sends a request to find that website. But computers cannot understand
+names directly, so they use something called DNS, which means Domain Name System. DNS works like a phone book and changes the website
+name into an IP address, which is a number that computers understand. After getting this IP address, the request goes to a server, which 
+is a powerful computer where all website data is stored. The server receives the request, finds the needed data like text, images, and videos, 
+and then sends a response back to our computer. Finally, the browser receives this data and displays it as a webpage on the screen. 
+This whole process happens very quickly, within a few seconds, and this is how the internet works.
+===========================================
+BLOCK 4 – PROBLEM SOLVING (Intermediate)
+
+Move all zeros to end of array
+
+Input:
+[0,1,0,3,12]
+
+Output:
+[1,3,12,0,0]
+
+Solve in O(n) time without extra array.
+Solution:
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[]arr=new int[n];
+        for (int i=0;i<n;i++) {
+            arr[i]=sc.nextInt();
+        }
+        int a=0;
+        for (int i=0;i<n;i++) {
+            if (arr[i]!=0) {
+                arr[a]=arr[i];
+                a++;
+            }
+        }
+        while (a<n) {
+            arr[a]=0;
+            a++;
+        }
+        for (int i=0;i<n;i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+===========================================
+BLOCK 5 – DATA STRUCTURES & ALGORITHMS
+
+Topic: Linked List Basics
+
+Problem – Reverse a Linked List
+
+Example:
+1 -> 2 -> 3 -> 4 -> 5
+Output:
+5 -> 4 -> 3 -> 2 -> 1
+
+Time Complexity: O(n)
+
+Practice Problem
+
+Find middle of linked list
+Solution:
+class Main{
+    public static Node findMiddle(Node head) {
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;        
+            fast = fast.next.next;   
+        }
+        return slow;
+    }
+    public static void main(String[] args) {
+        Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = new Node(5);
+        Node mid = findMiddle(head);
+        System.out.println("Middle Element: " + mid.data);
+    }
+}
+
+===========================================
+BLOCK 6 – CORE CS CONCEPTS
+
+DBMS CONCEPT – TRANSACTIONS
+
+A transaction is a sequence of database operations treated as a single unit.
+
+===========================================
+OPERATING SYSTEMS CONCEPT – DEADLOCK PREVENTION
+
+Deadlock prevention ensures at least one of the deadlock conditions never occurs.
+
+===========================================
+NETWORKING CONCEPT – TCP 3-WAY HANDSHAKE
+
+Steps:
+1. SYN
+2. SYN-ACK
+3. ACK
+
+===========================================
+CORE COMPUTER SCIENCE CONCEPT – TREE
+
+Tree is a hierarchical data structure.
+
+===========================================
+INTERVIEW QUESTION OF THE DAY
+
+What is the difference between stack and queue?
+
+Stack uses LIFO.
+Queue uses FIFO.
+
+===========================================
+END OF DAY 7 – QUANTUMNIQUE PLACEMENT ENGINE
