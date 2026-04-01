@@ -1,0 +1,219 @@
+QUANTUMNIQUE PLACEMENT ENGINE
+DAY 10 – FULL TRAINING PLAN (INTERVIEW FOCUSED)
+===========================================
+
+BLOCK 1 – APTITUDE (Speed, Time & Distance)
+
+Question 1
+A car travels 60 km in 1 hour. What is the speed?
+Solution:
+        Formula:
+               Speed = Distance / Time
+               Speed = 60 / 1 
+                     = 60 km/hr
+
+Question 2
+A train travels at 50 km/hr. How long will it take to travel 150 km?
+Solution:
+         Formula:
+                Time = Distance / Speed
+                Time = 150 / 50 
+                     = 3 hours
+
+Question 3
+If a person walks at 5 km/hr, how far will they walk in 3 hours?
+Solution:
+         Formula:
+                Distance = Speed * Time
+                Distance = 5 * 3 
+                         = 15 km
+
+Question 4
+Two trains move in opposite direction at 40 km/hr and 60 km/hr.
+Find relative speed.
+Solution:
+         Relative Speed = Sum of speeds
+         Relative Speed = 40 + 60 
+                        = 100 km/hr
+
+Question 5
+A car travels first half distance at 40 km/hr and second half at 60 km/hr.
+Find average speed.
+Solution:
+        Average = (2 * 40 * 60) / (40 + 60)
+                = (4800) / 100
+                = 48 km/hr
+
+===========================================
+BLOCK 2 – VERBAL ABILITY
+
+Reading Passage
+
+Binary search is an efficient searching algorithm that works on sorted arrays.
+It repeatedly divides the search interval into half and reduces the search space.
+
+Questions
+
+1. Where does binary search work?
+   Answer: It works on sorted arrays.
+2. How does binary search reduce search space?
+   Answer: It reduces search space by dividing the array into half at each step.
+3. Is binary search faster than linear search?
+   Answer: Yes, binary search is faster than linear search.
+Grammar Correction
+
+1. He doesn’t know binary search.
+2. She has completed the task.
+3. They are learning algorithms.
+
+===========================================
+BLOCK 3 – COMMUNICATION PRACTICE
+
+Speak for 3 minutes on:
+
+Explain Binary Search algorithm
+
+Include:
+- Sorted array
+- Middle element
+- Divide search space
+- Time complexity
+
+===========================================
+BLOCK 4 – PROBLEM SOLVING
+
+Binary Search Implementation
+
+Find element 25 in sorted array:
+[5,10,15,20,25,30,35]
+
+Return index.
+
+import java.util.*;
+public class binary{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int target=sc.nextInt();
+        int left=0;
+        int right=n-1;
+        while(left<right){
+            int mid=left+(right-left)/2;
+            if(arr[mid]==target){
+                System.out.println(mid);
+                return;
+            }
+            else if(arr[mid]>target){
+                right--;
+            }
+            else{
+                left++;
+            }
+        }
+    }
+}
+
+===========================================
+BLOCK 5 – DATA STRUCTURES & ALGORITHMS
+
+Topic: Merge Sort
+
+Merge Sort Steps:
+1. Divide array into halves
+2. Sort each half
+3. Merge sorted halves
+
+Time Complexity: O(n log n)
+
+Practice Problem:
+Implement Quick Sort
+
+
+import java.util.*;
+public class Quicksort {
+    static void quickSort(int arr[], int low, int high) {
+        if (low < high) {
+            int pi = partition(arr, low, high);
+            quickSort(arr, low, pi - 1);  
+            quickSort(arr, pi + 1, high); 
+        }
+    }
+    static int partition(int arr[], int low, int high) {
+        int pivot = arr[high]; 
+        int i = low - 1;
+        for (int j = low; j < high; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+        return i + 1;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
+        quickSort(arr, 0, n - 1);
+        for (int i = 0; i < n; i++)
+            System.out.print(arr[i] + " ");
+    }
+}
+
+===========================================
+BLOCK 6 – CORE CS CONCEPTS
+
+DBMS CONCEPT – SQL JOINS
+
+Types:
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL JOIN
+
+===========================================
+OPERATING SYSTEMS CONCEPT – DEADLOCK CONDITIONS
+
+4 Deadlock Conditions:
+1. Mutual Exclusion
+2. Hold and Wait
+3. No Preemption
+4. Circular Wait
+
+===========================================
+NETWORKING CONCEPT – DNS
+
+DNS converts domain names into IP addresses.
+
+===========================================
+CORE COMPUTER SCIENCE CONCEPT – TREE TRAVERSAL
+
+Types:
+- Inorder
+- Preorder
+- Postorder
+- Level Order
+
+===========================================
+INTERVIEW QUESTION OF THE DAY
+
+Difference between Linear Search and Binary Search?
+
+Linear Search:
+Searches entire list
+
+Binary Search:
+Works on sorted list, divides search space
+
+===========================================
+END OF DAY 10 – QUANTUMNIQUE PLACEMENT ENGINE
